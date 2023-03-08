@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const loaihoaController = require('../api/controllers/loaihoa.controller')
+const loaihoaController = require('../controllers/loaihoa.controller')
 
 router.get('/', loaihoaController.getAll);
 
