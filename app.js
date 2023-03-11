@@ -30,7 +30,7 @@ mongoose
 const PORT = process.env.PORT || 5001;
 
 //routes
-app.use('/api/v1', routers);
+app.use('/api/', routers);
 
 ///middleware error
 app.use((err,req,res,next) =>{
