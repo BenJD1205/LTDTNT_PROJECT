@@ -24,6 +24,18 @@ module.exports = {
             next(err);
         }
     },
+    getByMaLoai: async (req, res, next) => {
+        try {
+            const hoa = await Hoa.find().where("maloai",Number(req.params.maloai))
+            res.json({
+                success: true,
+                data:hoa,
+            })
+        }
+        catch (err) {
+            next(err);
+        }
+    },
     getByName: async (req, res, next) => {
         try {
             const hoa = await Hoa.find({tenhoa: new RegExp(req.params.tenhoa,'i')})
