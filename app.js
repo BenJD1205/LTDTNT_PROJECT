@@ -8,6 +8,7 @@ const routers = require('./routes');
 const app = express();
 
 //middlewares
+app.use(express.static('public/images'))
 app.use(
     cors({
         exposedHeaders: ['Content-Disposition'],
