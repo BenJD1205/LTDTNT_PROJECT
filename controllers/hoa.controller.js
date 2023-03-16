@@ -4,10 +4,7 @@ module.exports = {
     getAll: async (req, res, next) => {
         try {
             const hoas = await Hoa.find();
-            res.json({
-                success: true,
-                data:hoas
-            })
+            res.json(hoas)
         } catch (err) {
             next(err);
         }
@@ -15,10 +12,7 @@ module.exports = {
     getByMa: async (req, res, next) => {
         try {
             const hoa = await Hoa.find().where("mahoa",Number(req.params.mahoa))
-            res.json({
-                success: true,
-                data:hoa,
-            })
+            res.json(hoa)
         }
         catch (err) {
             next(err);
@@ -27,10 +21,7 @@ module.exports = {
     getByMaLoai: async (req, res, next) => {
         try {
             const hoa = await Hoa.find().where("maloai",Number(req.params.maloai))
-            res.json({
-                success: true,
-                data:hoa,
-            })
+            res.json(hoa)
         }
         catch (err) {
             next(err);
@@ -39,10 +30,7 @@ module.exports = {
     getByName: async (req, res, next) => {
         try {
             const hoa = await Hoa.find({tenhoa: new RegExp(req.params.tenhoa,'i')})
-            res.json({
-                success: true,
-                data:hoa,
-            })
+            res.json(hoa)
         }
         catch (err) {
             next(err);
