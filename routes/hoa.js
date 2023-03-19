@@ -5,7 +5,7 @@ router.get('/', hoaController.getAll);
 
 router.get("/:maloai", hoaController.getByMaLoai);
 
-// router.get("/mahoa/:mahoa",hoaController.getByMa)
+router.get("/mahoa/:id",hoaController.getById) 
 
 router.get("/tenhoa/:tenhoa", hoaController.getByName);
 

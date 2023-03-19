@@ -35,5 +35,14 @@ module.exports = {
         catch (err) {
             next(err);
         }
+    },
+    getById: async (req, res, next) => {
+        try {
+            const hoa = await Hoa.findById(req.params.id);
+            res.json(hoa);
+        }
+        catch (err) {
+            next(err);
+        }
     }
 }
