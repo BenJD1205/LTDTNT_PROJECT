@@ -3,8 +3,6 @@ const User = require('../models/user.model')
 module.exports = {
     login: async (req, res, next) => {
         try {
-            console.log(req.body.tendangnhap);
-            console.log(req.body.matkhau)
             const user = await User.find().where('tendangnhap').equals(req.body.tendangnhap).where('matkhau').equals(req.body.matkhau);
             res.status(201).json(user)
         }
