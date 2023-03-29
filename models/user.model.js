@@ -3,15 +3,15 @@ const UserSchema = mongoose.Schema(
     {
         tennguoidung: {
             type: String,
-            require: true,
+            required: true,
         },
         tendangnhap: {
             type: String,
-            require: true,
+            required: true,
         },
         matkhau: {
             type: String,
-            require: true,
+            required: true,
         },
         sodienthoai: String,
         email: String
