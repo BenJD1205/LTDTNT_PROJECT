@@ -13,10 +13,7 @@ module.exports = {
     getByLoai: async (req, res, next) => {
         try {
             const loaihoa = await Loaihoa.find().where("maloai",Number(req.params.maloai))
-            res.json({
-                success: true,
-                data:loaihoa,
-            })
+            res.json(loaihoa)
         }
         catch (err) {
             
